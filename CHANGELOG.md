@@ -2,6 +2,10 @@
 
 All notable changes to Basket Run. Each version is one commit on `main`, published by the Vibe Hub app factory after its checks passed.
 
+## v3 — Rolled back to v1 (2026-10-12)
+
+Rolled back to v1: One household grocery list: quick-add, check off, and re-add your weekly staples in a tap
+
 ## v2 — Weekly Dinner Plan Tab (2026-10-12)
 
 A new Dinners tab sits next to List and Staples. You keep a small library of dinners, each with ingredients that have a quantity and category, and assign one to each day of the week. One tap on a day adds that dinner's ingredients to the shopping list. Ingredients already on the list are merged by adding the quantities, and a toast reports what happened. The browser tab title now shows how many items are still unchecked, for example "(7) Basket Run". All new screens follow the light/dark theme.

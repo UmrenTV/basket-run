@@ -2,7 +2,7 @@
 One household grocery list: quick-add, check off, and re-add your weekly staples in a tap
 ## The request
 > A shared grocery list for one household: items with a quantity and a category, check items off as they go into the basket, a quick-add box, a weekly staples list that can be re-added in one tap, and dark mode.
-Asked for as a web app on 2026-10-12 and built by the Vibe Hub app factory on Claude Opus 5.5. It is self-contained: no accounts, no servers, data stays on the device.
+Asked for as a web app on 2026-10-12 and built by the Vibe Hub app factory on no AI key. It is self-contained: no accounts, no servers, data stays on the device.
 ## What the research found
 Shared grocery apps such as AnyList, OurGroceries and Bring! all work the same way. One household list is synced to everyone's phone. Items are auto-categorised by store aisle, and checking an item off moves it out of the way. Repeat buying is handled by Favorites, a master list or a staples list that can be re-added quickly. A self-contained offline build can't sync between devices, so it should treat 'shared' as one household list on one device. It should add export/import so the list can be shared by other means.
 ### What users expect from apps like this
@@ -66,4 +66,5 @@ Scope: simple. Layout: vanilla HTML, CSS and JavaScript, offline, local storage.
 ## Versions
 - v1 (2026-10-12): One household grocery list: quick-add, check off, and re-add your weekly staples in a tap
 - v2 (2026-10-12): Weekly Dinner Plan Tab
-The current version is v2. Every version is a commit on `main`; CHANGELOG.md has the details and docs/TESTING.md how each one was checked.
+- v3 (2026-10-12): Rolled back to v1: One household grocery list: quick-add, check off, and re-add your weekly staples in a tap
+The current version is v3. Every version is a commit on `main`; CHANGELOG.md has the details and docs/TESTING.md how each one was checked.

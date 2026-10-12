@@ -21,7 +21,6 @@
       <div class="tabs" role="tablist" aria-label="Views">
         <button class="tab" role="tab" id="tab-list" aria-controls="panel-list" aria-selected="true" type="button">List <span class="tab-count" id="list-count">0</span></button>
         <button class="tab" role="tab" id="tab-staples" aria-controls="panel-staples" aria-selected="false" tabindex="-1" type="button">Staples <span class="tab-count" id="staples-count">0</span></button>
-        <button class="tab" role="tab" id="tab-dinners" aria-controls="panel-dinners" aria-selected="false" tabindex="-1" type="button">Dinners <span class="tab-count" id="dinners-count">0</span></button>
       </div>
     </div>
   </header>
@@ -44,8 +43,8 @@
       <section id="basket" class="basket" aria-labelledby="basket-toggle" hidden></section>
     </section>
 
-    <section id="panel-staples" role="tabpanel" aria-label="Weekly items" hidden>
-      <p class="intro">Things you buy every week. Re-add them all at once, or one at a time. Staples already on the list are skipped.</p>
+    <section id="panel-staples" role="tabpanel" aria-labelledby="tab-staples" hidden>
+      <p class="intro">Things you buy every week. Re-add them all at once, or one at a time.</p>
       <form id="staple-form" class="card staple-form" autocomplete="off">
         <div class="field grow">
           <label for="staple-name">Staple</label>
@@ -53,7 +52,7 @@
         </div>
         <div class="field qty-field">
           <label for="staple-qty">Qty</label>
-          <input id="staple-qty" class="input" type="number" min="1" max="9999" value="1" inputmode="numeric">
+          <input id="staple-qty" class="input" type="number" min="1" max="999" value="1" inputmode="numeric">
         </div>
         <div class="field">
           <label for="staple-cat">Category</label>
@@ -67,37 +66,6 @@
       </div>
       <ul id="staples-list" class="rows staples"></ul>
     </section>
-
-    <section id="panel-dinners" role="tabpanel" aria-labelledby="tab-dinners" hidden>
-      <p class="intro">Plan a dinner for each night, then add its ingredients to the list. Items already on the list get their quantities added together.</p>
-      <div class="plan-head">
-        <div class="field week-field">
-          <label for="week-start">Week starts on</label>
-          <select id="week-start" class="input">
-            <option value="mon">Monday</option>
-            <option value="sun">Sunday</option>
-          </select>
-        </div>
-        <div class="plan-actions">
-          <button id="add-week" class="btn primary" type="button">Add whole week</button>
-          <button id="clear-week" class="btn danger" type="button">Clear week</button>
-        </div>
-      </div>
-      <h2 class="section-title">This week</h2>
-      <ul id="week" class="week"></ul>
-
-      <div class="staples-bar">
-        <h2 class="section-title">My dinners</h2>
-      </div>
-      <form id="dinner-form" class="card staple-form" autocomplete="off">
-        <div class="field grow">
-          <label for="dinner-name">New dinner</label>
-          <input id="dinner-name" class="input" type="text" maxlength="80" placeholder="e.g. Tacos" required data-key="dinner-name">
-        </div>
-        <button class="btn" type="submit">Add dinner</button>
-      </form>
-      <div id="dinner-list" class="dinner-list"></div>
-    </section>
   </main>
 
   <footer class="wrap foot">
@@ -109,16 +77,6 @@
       <input id="import-file" class="sr-only" type="file" accept="application/json,.json">
     </div>
   </footer>
-
-  <dialog id="confirm" class="dialog" aria-labelledby="confirm-msg">
-    <form method="dialog">
-      <p id="confirm-msg"></p>
-      <div class="dialog-actions">
-        <button class="btn" type="submit" value="cancel">Cancel</button>
-        <button class="btn primary" type="submit" value="ok" id="confirm-ok">OK</button>
-      </div>
-    </form>
-  </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="./app.js"></script>

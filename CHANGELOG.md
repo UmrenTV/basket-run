@@ -2,6 +2,10 @@
 
 All notable changes to Basket Run. Each version is one commit on `main`, published by the Vibe Hub app factory after its checks passed.
 
+## v4 — Rolled back to v2 (2026-10-12)
+
+Rolled back to v2: Weekly Dinner Plan Tab
+
 ## v3 — Rolled back to v1 (2026-10-12)
 
 Rolled back to v1: One household grocery list: quick-add, check off, and re-add your weekly staples in a tap

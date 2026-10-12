@@ -1,12 +1,24 @@
-# Testing Basket Run (v3)
+# Testing Basket Run (v2)
 How the Vibe Hub app factory checked this version before publishing it, and how to repeat the checks.
 ## Static checks
 Every required file present, the page loads only its own files, every script parses, stylesheets balance their braces, JSON files parse.
-Result: clean.
+Findings on the published files:
+
+- warning app.js: contains TODO/FIXME or placeholder text
 ## Browser run
-No browser was available to this process; the browser run was skipped.
+Opened in headless Chromium on a phone (390×844, dark) and a desktop (1280×800, light): no uncaught errors, no console errors, no failed requests, nothing leaving the page, a title, visible content, no sideways scroll on the phone, 4 buttons clicked, a field filled and submitted, and a reload.
+
+Result: clean
 ## Acceptance scenarios
-No acceptance scenarios ran for this version (they need an AI key to be written from the checklist).
+4 of 4 scenarios passed.
+
+| Scenario | Result |
+| --- | --- |
+| Create dinner Tacos | pass |
+| Onions row on list before dinner merge | pass |
+| Data survives reload | pass |
+| Add all skips staples already on list | pass |
+The model repaired the app 1 time during verification; the checks above are for the published files.
 ## Tester's checklist
 - [ ] Type "2 milk" in the quick-add box and press Enter. Milk should appear under Dairy with quantity 2, and the input should clear and stay focused. Then add "bananas" and confirm it lands in Produce.
 - [ ] Use the − / + stepper on an item and edit its name and category inline. The change should stick, and the item should move to its new category heading.

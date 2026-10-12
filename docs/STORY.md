@@ -67,4 +67,5 @@ Scope: simple. Layout: vanilla HTML, CSS and JavaScript, offline, local storage.
 - v1 (2026-10-12): One household grocery list: quick-add, check off, and re-add your weekly staples in a tap
 - v2 (2026-10-12): Weekly Dinner Plan Tab
 - v3 (2026-10-12): Rolled back to v1: One household grocery list: quick-add, check off, and re-add your weekly staples in a tap
-The current version is v3. Every version is a commit on `main`; CHANGELOG.md has the details and docs/TESTING.md how each one was checked.
+- v4 (2026-10-12): Rolled back to v2: Weekly Dinner Plan Tab
+The current version is v4. Every version is a commit on `main`; CHANGELOG.md has the details and docs/TESTING.md how each one was checked.

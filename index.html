@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Basket Run</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#quick-input">Skip to quick add</a>
+  <header class="top">
+    <div class="wrap top-inner">
+      <h1 class="brand">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="logo"><path d="M3 6h2l2.2 10.2a1 1 0 001 .8h9.6a1 1 0 001-.8L21 9H7"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>
+        Basket Run
+      </h1>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode" aria-pressed="false"></button>
+    </div>
+    <div class="wrap">
+      <div class="tabs" role="tablist" aria-label="Views">
+        <button class="tab" role="tab" id="tab-list" aria-controls="panel-list" aria-selected="true" type="button">List <span class="tab-count" id="list-count">0</span></button>
+        <button class="tab" role="tab" id="tab-staples" aria-controls="panel-staples" aria-selected="false" tabindex="-1" type="button">Staples <span class="tab-count" id="staples-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="panel-list" role="tabpanel" aria-labelledby="tab-list">
+      <form id="quick-form" class="quick" autocomplete="off">
+        <div class="quick-row">
+          <label for="quick-input" class="sr-only">Add an item, optionally starting with a quantity</label>
+          <input id="quick-input" class="input quick-input" type="text" maxlength="80" placeholder="Add item, e.g. 2 milk" enterkeyhint="done">
+          <label for="quick-cat" class="sr-only">Category</label>
+          <select id="quick-cat" class="input quick-cat"></select>
+          <button class="btn primary" type="submit" aria-label="Add item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span class="btn-label">Add</span>
+          </button>
+        </div>
+        <p class="hint" id="quick-hint">Tap the circle to check an item off, or tap its name to edit.</p>
+      </form>
+      <div id="list"></div>
+      <section id="basket" class="basket" aria-labelledby="basket-toggle" hidden></section>
+    </section>
+
+    <section id="panel-staples" role="tabpanel" aria-labelledby="tab-staples" hidden>
+      <p class="intro">Things you buy every week. Re-add them all at once, or one at a time.</p>
+      <form id="staple-form" class="card staple-form" autocomplete="off">
+        <div class="field grow">
+          <label for="staple-name">Staple</label>
+          <input id="staple-name" class="input" type="text" maxlength="80" placeholder="e.g. Bread" required>
+        </div>
+        <div class="field qty-field">
+          <label for="staple-qty">Qty</label>
+          <input id="staple-qty" class="input" type="number" min="1" max="999" value="1" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="staple-cat">Category</label>
+          <select id="staple-cat" class="input"></select>
+        </div>
+        <button class="btn" type="submit">Save staple</button>
+      </form>
+      <div class="staples-bar">
+        <h2 class="section-title">Your staples</h2>
+        <button id="add-all" class="btn primary" type="button">Add all</button>
+      </div>
+      <ul id="staples-list" class="rows staples"></ul>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <h2 class="section-title">Your data</h2>
+    <p class="hint">Saved on this device. Export a copy to back it up or move it to another device.</p>
+    <div class="foot-actions">
+      <button id="export-btn" class="btn" type="button">Export JSON</button>
+      <label for="import-file" class="btn file-btn">Import JSON</label>
+      <input id="import-file" class="sr-only" type="file" accept="application/json,.json">
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>

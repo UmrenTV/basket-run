@@ -1,0 +1,11 @@
+{
+  "name": "Basket Run",
+  "short_name": "Basket Run",
+  "description": "One household grocery list: quick-add, check off, and re-add your weekly staples in a tap",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111218",
+  "theme_color": "#4f46e5",
+  "icons": []
+}
